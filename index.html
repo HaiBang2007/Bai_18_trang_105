@@ -2,111 +2,193 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký Câu Lạc Bộ</title>
+    <title>Hoạt Động Ngoại Khóa Lớp 12H</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            width: 50%;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
+            line-height: 1.6;
             color: #333;
-            transition: color 0.3s, transform 0.3s;
         }
-        h2:hover {
-            color: #4CAF50;
-            transform: scale(1.1);
+        .banner {
+            background: url("https://solenvn.com/wp-content/uploads/2023/10/dat-rung-dac-dung-la-gi_2202082641-1536x960.jpg") no-repeat center center;
+            background-size: cover;
+            padding: 5rem 0;
+            text-align: center;
+            color: white;
         }
-        .form-group {
-            margin-bottom: 15px;
+        .banner h1 {
+            font-size: 3rem;
+            margin: 0;
         }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            transition: color 0.3s, font-weight 0.3s;
+        .section {
+            padding: 40px 20px;
+            text-align: center;
         }
-        label:hover {
-            color: #4CAF50;
-            font-weight: 600;
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+        .activities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .activity {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            background: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .activity img {
             width: 100%;
-            padding: 8px;
+            height: auto;
+        }
+        .activity h3 {
+            background: #3498db;
+            color: white;
+            margin: 0;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+        .activity p {
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(25% - 10px);
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .feedback {
+            background: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .feedback h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .feedback .review {
+            margin-bottom: 20px;
+        }
+        .feedback .review p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .feedback .review .author {
+            font-weight: bold;
+        }
+        .feedback .new-review {
+            margin-top: 20px;
+        }
+        .feedback .new-review input,
+        .feedback .new-review textarea {
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: border-color 0.3s, color 0.3s, font-size 0.3s, border-width 0.3s;
+            border-radius: 5px;
+            display: block;
+            font-size: 1rem;
         }
-        /* Khi di chuyển chuột qua input, select hoặc textarea */
-        input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover, select:hover, textarea:hover {
-            border-color: #4CAF50;   /* Đổi màu viền thành xanh lá */
-            font-size: 16px;          /* Tăng kích thước chữ */
-            border-width: 2px;        /* Làm dày viền */
-            color: #333;              /* Màu chữ tối hơn */
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
+        .feedback .new-review button {
+            background: #3498db;
             color: white;
             border: none;
             padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .form-group small {
-            color: #888;
+        .feedback .new-review button:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Đăng Ký Tham Gia Câu Lạc Bộ</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="fullname">Họ và tên</label>
-                <input type="text" id="fullname" name="fullname" required placeholder="Nhập họ và tên của bạn">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Nhập email của bạn">
-            </div>
-            <div class="form-group">
-                <label for="phone">Số điện thoại</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn">
-                <small>Định dạng: 0123456789</small>
-            </div>
-            <div class="form-group">
-                <label for="activities">Chọn hoạt động muốn tham gia</label>
-                <select id="activities" name="activities[]" multiple required>
-                    <option value="art">nghethuat</option>
-                    <option value="sport">the thao</option>
-                </select>
-                <small>Giữ Ctrl (hoặc Command trên Mac) để chọn nhiều hoạt động</small>
-            </div>
-            <div class="form-group">
-                <label for="message">Lý do muốn tham gia</label>
-                <textarea id="message" name="message" rows="4" placeholder="Nhập lý do bạn muốn tham gia câu lạc bộ"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Đăng ký">
-            </div>
-        </form>
+    <div class="banner">
+        <h1>Hoạt Động Ngoại Khóa Lớp Hóa K32</h1>
+        <p> Không biết giảng hóa - Chỉ biết giảng hòa</p>
     </div>
+
+    <div class="section">
+        <h2>Cùng khám phá thôi... Gét Gô!</h2>
+        <div class="activities">
+            <div class="activity">
+                <img src="https://imgur.com/SPxcnOd.jpeg" alt="Năng Động">
+                <h3>Năng Động</h3>
+                <p>Luôn tham gia các hoạt động với tinh thần nhiệt huyết và tràn đầy năng lượng.</p>
+            </div>
+            <div class="activity">
+                <img src="https://imgur.com/7SJWxLl.jpeg" alt="Sáng Tạo">
+                <h3>Sáng Tạo</h3>
+                <p>Không ngừng đổi mới, tạo nên những giá trị độc đáo và khác biệt.</p>
+            </div>
+            <div class="activity">
+                <img src="https://imgur.com/vEKhUNv.jpeg" alt="Tỏa Sáng">
+                <h3>Tỏa Sáng</h3>
+                <p>Khẳng định bản thân và mang về những thành tích đáng tự hào.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Album</h2>
+        <div class="gallery">
+            <img src="https://imgur.com/T3N2dod.jpeg" alt="Ảnh 1">
+            <img src="https://imgur.com/EbkDvCQ.jpeg" alt="Ảnh 2">
+            <img src="https://imgur.com/GWQP3gY.jpeg" alt="Ảnh 3">
+            <img src="https://imgur.com/tuK6tDh.jpeg" alt="Ảnh 4">
+	    <img src="https://imgur.com/dgRSC6u.jpeg" alt="Ảnh 5">
+            <img src="https://imgur.com/HHi7Xxb.jpeg" alt="Ảnh 6">
+            <img src="https://imgur.com/dspqZCg.jpeg" alt="Ảnh 7">
+            <img src="https://imgur.com/03Dz4o7.jpeg" alt="Ảnh 8">
+
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h2>Cảm Nhận Của Các Bạn</h2>
+
+        <div class="review">
+            <p>"Chuyến ngoại khóa này thật sự ý nghĩa, giúp chúng mình gắn kết và học hỏi thêm nhiều điều mới."</p>
+            <p class="author">- Nguyễn Văn A</p>
+        </div>
+        <div class="review">
+            <p>"Những kỷ niệm tại đây sẽ luôn là động lực để mình cố gắng hơn trong tương lai."</p>
+            <p class="author">- Trần Thị B</p>
+        </div>
+
+        <div class="new-review">
+            <h3>Viết Cảm Nhận Của Bạn</h3>
+            <textarea placeholder="Hãy chia sẻ cảm nhận của bạn..."></textarea>
+            <label for="rating">Đánh giá:</label>
+            <select id="rating">
+               <option value="5">5 ⭐⭐⭐⭐⭐</option>
+                        <option value="4">4 ⭐⭐⭐⭐</option>
+                        <option value="3">3 ⭐⭐⭐</option>
+                        <option value="2">2 ⭐⭐</option>
+                        <option value="1">1 ⭐</option>
+
+            </select>
+            <button>Gửi</button>
+        </div>
+		<a href= " fb.com "target="_blank"> Biểu mẫu đăng kí ngoại khoái </a>
+    </div>
+
 </body>
 </html>
